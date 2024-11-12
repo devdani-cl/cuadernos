@@ -10,4 +10,4 @@ En este cuaderno están mis apuntes sobre C++.
 # Desafíos.
 
 1. Desafío número 1
-1. [Desafío número 2]()
+1. [Desafío número 2](https://github.com/devdani-cl/cuadernos/blob/main/c%2B%2B/desafio-n2.md)
