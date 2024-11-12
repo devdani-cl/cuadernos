@@ -7,8 +7,7 @@ En este cuaderno están mis apuntes sobre C++.
 1. Recursividad y punteros.
 1. [POO.](https://github.com/devdani-cl/cuadernos/blob/main/c%2B%2B/poo.md)
 
+# Desafíos.
 
-# [certamen 2]()
-
-- Punteros
-- POO
+1. Desafío número 1
+1. [Desafío número 2]()
