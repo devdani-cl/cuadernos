@@ -6,7 +6,7 @@ En este cuaderno están mis apuntes sobre C++.
 1. [Fundamentos básicos del lenguaje.](https://github.com/devdani-cl/cuadernos/blob/main/c%2B%2B/fundamentos-basicos.md)
 1. Recursividad y punteros.
 1. [POO.](https://github.com/devdani-cl/cuadernos/blob/main/c%2B%2B/poo.md)
-
+1. [Listas enlazadas.]()
 # Desafíos.
 
 1. Desafío número 1
