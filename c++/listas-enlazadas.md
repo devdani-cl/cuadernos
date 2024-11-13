@@ -17,7 +17,7 @@ struct Nodo {
   Nodo *siguiente;
 };
 ```
-## Clasificación de listas enlazadas
+# Clasificación de listas enlazadas
 
 1. Lista simplementes enlazada
 2. Lista doblemente enlazada
@@ -55,3 +55,101 @@ _"el nodo al puntero siguiente apunta al nodo que le sigue el que esta delante"_
 - Mostras los elementos de una lista enlazada.
 - Buscar un elemento en una lista enlazada.
 - Eliminar un elemento en una lista enlazada.
+
+## Insertar elementos en una lista
+- Para insertar elementos en una lista es necesario hacer lo siguiente.
+1. Crear un nuevo nodo.
+2. Asignar a nuevo_nodo -> dato el elemento que queremos incluir a la lista.
+3. Crear dos nodos auxiliares y asignar lista al primero de ellos.
+4. Insertar el elemento a la lista.
+
+## Crear un nuevo nodo.
+![image](https://github.com/user-attachments/assets/2d469b07-5cc0-4ed2-a20c-36eb3fd89692)
+
+```cpp
+void insertarLista(Nodo *&lista, int n) {
+  Nodo *nuevo_nodo = new Nodo();
+}
+```
+## Asignar a nuevo_nodo -> dato el elemento que queremos incluir a la lista.
+```cpp
+struct Nodo {
+  int dato;
+  Nodo *siguiente;
+};
+```
+_"Acá es en la función principal"_
+```cpp
+void insertarLista(Nodo *&lista, int n){
+  Nodo *nuevo_nodo = new Nodo();
+  nuevo_nodo -> dato = n;
+}
+```
+
+## Crear dos nodos auxiliares y asignar lista al primero de ellos.
+![image](https://github.com/user-attachments/assets/a80310ff-c495-4256-9862-d85a34614db7)
+
+```cpp
+void insertarLista(Nodo *&lista, int n){
+  Nodo *nuevo_nodo = new Nodo();
+  nuevo_nodo -> dato = n;
+
+  Nodo *aux1 = lista;
+  Nodo *aux2;
+  
+```
+
+## Insertar el elemento a la lista.
+Vamos a tener tres casos de listas:
+![image](https://github.com/user-attachments/assets/b4ecc361-9637-4f65-aace-b6690e44bf96)
+
+- Cuando la lista esta vacía (Lista -> null)
+- Cuando ya tengamos un Nodo _"vamos a tener dos posiciones que agregar, al inicio y al final"_
+- Cuando tengamos dos o más nodos _"en este caso se agregar al inicio al medio o al final el nodo que queremos incluir a la lista"_
+
+- _"recordar prioritariamente que tenemos dos casos al principio, en medio o al final, crear la lista de tal manera que el elemento que se inserta sea de manera ordenada y ascendente "_
+
+¿Cómo insertar elementos al principio de la lista?
+
+¿Cómo insertar elementos al medio o al final de la lista?
+
+
+## Código final.
+
+```cpp
+void insertarLista(Nodo *&lista, int n){
+  Nodo *nuevo_nodo = new Nodo();
+  nuevo_nodo -> dato = n;
+
+  Nodo *aux1 = lista;
+  Nodo *aux2;
+
+  while ((aux1 != NULL) && (aux1 -> dato < n)){
+    aux2 = aux1;
+    aux1 = aux1 ->siguiente;
+  }
+  if (lista == aux1){
+    lista = nuevo_nodo;
+  }
+  else {
+    aux2 -> siguiente = nuevo_nodo;
+  }
+
+  nuevo_nodo -> siguiente = aux1;
+  std::cout << "\tElemento " << n << "insertado correctamente!\n";
+}
+```
+
+En la función principal tenemos que crear la variable puntero lista e igualarlo a NULL.
+
+```cpp
+int main (){
+  Nodo *lista = NULL;
+
+  std::cout << "digita un número: ";
+  std::cin >> dato;
+  insertarLista(lista, dato);
+
+  getch();
+  return 0;
+```
