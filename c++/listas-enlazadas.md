@@ -153,3 +153,79 @@ int main (){
   getch();
   return 0;
 ```
+
+## Código de listas enlazadas.
+
+```cpp
+#include <iostream>
+
+struct Nodo {
+    int dato;
+    Nodo *siguiente;
+};
+
+void insertarLista(Nodo *&lista, int n) {
+    // crear un nuevo nodo y asignar el valor 'n'
+    Nodo *nuevo_nodo = new Nodo();
+    nuevo_nodo->dato = n;
+
+    Nodo *aux1 = lista;
+    Nodo *aux2 = nullptr;
+
+    // recorrer la lista para encontrar la posición correcta de inserción
+    while ((aux1 != nullptr) && (aux1->dato < n)) {
+        aux2 = aux1;
+        aux1 = aux1->siguiente;
+    }
+
+    // insertar al inicio si corresponde
+    if (lista == aux1) {
+        lista = nuevo_nodo;
+    } else {
+        aux2->siguiente = nuevo_nodo;
+    }
+    // enlazar el nuevo nodo con el siguiente
+    nuevo_nodo->siguiente = aux1;
+}
+
+void mostrarLista(Nodo *lista) {
+    Nodo *actual = lista;
+    std::cout << "Lista ordenada: ";
+    while (actual != nullptr) {
+        std::cout << actual->dato << " ";
+        actual = actual->siguiente;
+    }
+    std::cout << std::endl;
+}
+
+void liberarLista(Nodo *&lista) {
+    Nodo *aux;
+    while (lista != nullptr) {
+        aux = lista;
+        lista = lista->siguiente;
+        delete aux;
+    }
+}
+
+int main() {
+    Nodo *lista = nullptr;
+    int dato;
+
+    std::cout << "Ingrese números enteros (ingrese 0 para terminar):" << std::endl;
+    std::cout << "Número: ";
+    std::cin >> dato;
+
+    while (dato != 0) {
+        insertarLista(lista, dato);
+        std::cout << "Número: ";
+        std::cin >> dato;
+    }
+
+    mostrarLista(lista);
+
+    // liberar la memoria utilizada por la lista
+    liberarLista(lista);
+
+    return 0;
+}
+```
