@@ -229,3 +229,69 @@ int main() {
     return 0;
 }
 ```
+
+Ejemplo de código de usos de lista enlazadas.
+
+```cpp
+#include <iostream>
+#include <string>
+
+struct Contacto {
+    std::string nombre;
+    std::string telefono;
+    std::string correo;
+    Contacto *siguiente;
+    Contacto *anterior;
+};
+
+void insertarContacto(Contacto *&inicio, Contacto *&fin, const std::string &nombre, const std::string &telefono, const std::string &correo) {
+    Contacto *nuevo_contacto = new Contacto();
+    nuevo_contacto->nombre = nombre;
+    nuevo_contacto->telefono = telefono;
+    nuevo_contacto->correo = correo;
+    nuevo_contacto->siguiente = nullptr;
+    nuevo_contacto->anterior = nullptr;
+
+    // Si la lista está vacía
+    if (inicio == nullptr) {
+        inicio = fin = nuevo_contacto;
+    } else {
+        // Inserta al final de la lista
+        fin->siguiente = nuevo_contacto;
+        nuevo_contacto->anterior = fin;
+        fin = nuevo_contacto;
+    }
+}
+
+void mostrarAgenda(Contacto *inicio) {
+    Contacto *actual = inicio;
+    while (actual != nullptr) {
+        std::cout << "Nombre: " << actual->nombre << ", Teléfono: " << actual->telefono << ", Correo: " << actual->correo << std::endl;
+        actual = actual->siguiente;
+    }
+}
+
+void liberarAgenda(Contacto *&inicio) {
+    Contacto *aux;
+    while (inicio != nullptr) {
+        aux = inicio;
+        inicio = inicio->siguiente;
+        delete aux;
+    }
+}
+
+int main() {
+    Contacto *inicio = nullptr;
+    Contacto *fin = nullptr;
+
+    insertarContacto(inicio, fin, "Juan Pérez", "1234567890", "juan@example.com");
+    insertarContacto(inicio, fin, "María López", "0987654321", "maria@example.com");
+
+    std::cout << "Agenda de Contactos: " << std::endl;
+    mostrarAgenda(inicio);
+
+    liberarAgenda(inicio);
+    return 0;
+}
+
+```
