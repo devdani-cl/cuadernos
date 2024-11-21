@@ -11,3 +11,8 @@ En este cuaderno están mis apuntes sobre C++.
 
 1. Desafío número 1
 1. [Desafío número 2](https://github.com/devdani-cl/cuadernos/blob/main/c%2B%2B/desafio-n2.md)
+
+# Certamen,
+
+1. Martes 3/12 certamen número 3.
+  - 
