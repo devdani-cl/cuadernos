@@ -7,12 +7,15 @@ En este cuaderno están mis apuntes sobre C++.
 1. Recursividad y punteros.
 1. [POO.](https://github.com/devdani-cl/cuadernos/blob/main/c%2B%2B/poo.md)
 1. [Listas enlazadas.](https://github.com/devdani-cl/cuadernos/blob/main/c%2B%2B/listas-enlazadas.md)
+1. Pilas.
+1. Colas.
+1. Arboles.
+   
 # Desafíos.
 
 1. Desafío número 1
 1. [Desafío número 2](https://github.com/devdani-cl/cuadernos/blob/main/c%2B%2B/desafio-n2.md)
 
-# Certamen,
+# Certamen NRO 3
 
-1. Martes 3/12 certamen número 3.
-  - 
+1. Martes 3/12 
