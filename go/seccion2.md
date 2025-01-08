@@ -17,10 +17,7 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("hola mundo")
-
 	// declaración de variables
-
 	var adios string
 	var num int
 
@@ -35,7 +32,13 @@ func main() {
 }
 
 //funciones
-func decirAlgo() (string, string) { // una función que retorna en una cadena string
+func decirAlgo() (string, string) { // una función que retorna en una cadena string. una función puede retornar a más de una cosa 
 	return "decir algo como", "gordita rica"
 }
 ```
+Código 3: Punteros
+```go
+
+```
+
+
