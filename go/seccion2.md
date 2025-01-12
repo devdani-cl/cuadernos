@@ -38,7 +38,25 @@ func decirAlgo() (string, string) { // una función que retorna en una cadena st
 ```
 Código 3: Punteros
 ```go
+package main
 
+import "fmt"
+
+func main() {
+	var cadena string
+	cadena = "azul"
+
+	fmt.Println("la variable cadena es", cadena)
+	usandoPuntero(&cadena)
+	fmt.Println("el nuevo valor de la cadena es", cadena)
+
+}
+
+func usandoPuntero(s *string) {
+	fmt.Println("la dirección de s es", s)
+	nuevoValor := "Rojo"
+	*s = nuevoValor
+}
 ```
 
 
