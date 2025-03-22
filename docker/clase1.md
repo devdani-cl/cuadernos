@@ -47,7 +47,7 @@ de forma consistente en cualquier entorno donde exista un runtime de contenedore
     - construye (crea) una nueva imagen usando Dockerfile.
     - ejemplo: si tengo un Dockerfile en la carpeta actual, se puede crear una imagen con `docker build -t <nombre_imagen>`.
 
-(¿cómo se llaman los comando de este tipo `-d`, `-a`, `-t`, `--name`, etc?)
+(¿cómo se llaman los parámetros de este tipo `-d`, `-a`, `-t`, `--name`, etc?¿cómo utilizarlos dependiendo de lo que se quiera hacer?)
  
 **Forma de trabajo con Docker.**
 
