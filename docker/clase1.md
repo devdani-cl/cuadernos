@@ -53,7 +53,7 @@ de forma consistente en cualquier entorno donde exista un runtime de contenedore
 
 1. Crear una carpeta para el proyecto. (¿`mkdir <nombre_carpeta>` es una forma de crear una carpeta para el proyecto?¿cómo abrir la carpeta en el vscode de forma directo?)
 2. Dentro de la carpeta, crear un archivo **Dockerfile**.
-3. Construir la imagen `docker file -t <nombre_imagen .>`, el punto indica que el archivo Dockerfile se está construyendo en la carpeta actual. (¿cómo sería si quiero construir la imagen en otra carpeta?)
+3. Construir la imagen `docker build -t <nombre_imagen .>`, el punto indica que el archivo Dockerfile se está construyendo en la carpeta actual. (¿cómo sería si quiero construir la imagen en otra carpeta?)
 4. Cada vez que se modifica el Dockerfile, se "buildea" `docker build -t <nombre_imagen> .`, es decir volver a construir la imagen para aplicar los cambios.
 5. Crear  y/o correr el **contenedor** a partir de la imagen.
 
@@ -69,13 +69,13 @@ de forma consistente en cualquier entorno donde exista un runtime de contenedore
 
 **Glosario y tecnisismo:**
 
-- Contenerizar: Proceso de empacar una aplicación y sus dependencias en contenedores a través de imágenes para que puede ejecutarse en cualquier entorno.
+- **Contenerizar:** Proceso de empacar una aplicación y sus dependencias en contenedores a través de imágenes para que puede ejecutarse en cualquier entorno.
   
-- Contenedores: Es una _instancia en ejecución_ de una imagen. Cada contenedor tiene su propio sistema de archivos aislado, sus variables de entorno y sus propios procesos corriendo en él.
+- **Contenedores:** Es una _instancia en ejecución_ de una imagen. Cada contenedor tiene su propio sistema de archivos aislado, sus variables de entorno y sus propios procesos corriendo en él.
   
-- Imágenes: Es una plantilla/fotografía de un sistema con todas las dependencias, configuraciones y el código necesario para que una app funcione, es inmutable, es decir, no cambia. Ej: `python:3.10` es una imagen que contiene todo lo necesario para tener Python en la versión 3.10.
+- **Imágenes:** Es una plantilla/fotografía de un sistema con todas las dependencias, configuraciones y el código necesario para que una app funcione, es inmutable, es decir, no cambia. Ej: `python:3.10` es una imagen que contiene todo lo necesario para tener Python en la versión 3.10.
   
-- Empacar:
-- Dependencias: Son las archivos y ejecutables de la aplicación.  
-- Entorno: Es donde se trabaja o desarrolla el software. Un ejemplo sería:
-- Runtime: 
+- **Empacar:**
+- **Dependencias:** Son las archivos y ejecutables de la aplicación.  
+- **Entorno:** Es donde se trabaja o desarrolla el software. Un ejemplo sería:
+- **Runtime:** 
