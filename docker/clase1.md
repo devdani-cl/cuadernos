@@ -14,7 +14,7 @@ de forma consistente en cualquier entorno donde exista un runtime de contenedore
 
 - `docker pull <imagen>`
     - descarga la imagen de docker hub a mi máquina local (¿cuál sería la máquina local?)
-    - ejemplo: docker pull python:3.10. 
+    - ejemplo: `docker pull python:3.10`.
 
 - `docker images`
     - muestra y lista todas las imágenes que tengo descargadas en el pc.
