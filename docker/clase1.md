@@ -12,8 +12,11 @@ de forma consistente en cualquier entorno donde exista un runtime de contenedore
 Glosario:
 
 - Contenerizar:
-- Contenedores:
-- Imágenes:
+  
+- Contenedores: Es una _instancia en ejecución_ de una imagen. Cada contenedor tiene su propio sistema de archivos aislado, sus variables de entorno y sus propios procesos corriendo en él.
+  
+- Imágenes: Es una plantilla/fotografía de un sistema con todas las dependencias, configuraciones y el código necesario para que una app funcione, es inmutable, es decir, no cambia. Ej: `python:3.10` es una imagen que contiene todo lo necesario para tener Python en la versión 3.10.
+  
 - Empacar:
 - Dependencias:
 - Entorno:
