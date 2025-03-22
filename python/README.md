@@ -16,3 +16,8 @@ Tabla de contenido.
 1. Archivos.
     1. lectura y creación de archivos.
     2. whit... open...
+1. Listas.
+    1. uso de listas
+    2. recorrer listas
+    3. buenas practicas
+  
